@@ -1,0 +1,53 @@
+.capture-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 7px;
+  margin-top: 8px;
+}
+
+.capture-actions button {
+  min-width: 0;
+  padding: 9px 8px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 7px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: white;
+  text-align: left;
+  cursor: pointer;
+}
+
+.capture-actions button:hover {
+  border-color: #95b958;
+  background: #fbfff3;
+}
+
+.capture-actions button:disabled {
+  opacity: .55;
+  cursor: wait;
+}
+
+.capture-actions span {
+  grid-row: 1 / 3;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--ink);
+  color: var(--lime);
+  font-size: 15px;
+}
+
+.capture-actions strong { font-size: 9px; }
+
+.capture-actions small {
+  color: var(--muted);
+  font-size: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

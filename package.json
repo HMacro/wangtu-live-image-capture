@@ -1,0 +1,12 @@
+{
+  "name": "wangtu-live-image-capture",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-extension.mjs",
+    "validate": "node scripts/validate-extension.mjs",
+    "test": "node --test tests/extension.test.mjs tests/worker.test.mjs",
+    "preview:web": "node scripts/preview.mjs",
+    "build:web": "node scripts/build.mjs"
+  }
+}

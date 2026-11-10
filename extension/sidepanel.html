@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>网图实时捕获器</title>
+  <link rel="stylesheet" href="sidepanel.css">
+  <link rel="stylesheet" href="capture.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">↘</span><span>网图捕获器</span></div>
+    <span id="liveBadge" class="live-badge"><i></i> 实时监听</span>
+  </header>
+
+  <main>
+    <section class="page-card">
+      <div class="page-icon">◎</div>
+      <div class="page-copy">
+        <strong id="pageTitle">等待连接当前网页</strong>
+        <span id="pageUrl">打开一个 HTTP 或 HTTPS 网站</span>
+      </div>
+      <button id="rescan" class="icon-button" type="button" title="重新扫描">↻</button>
+    </section>
+
+    <section class="controls">
+      <input id="search" type="search" placeholder="搜索文件名或地址">
+      <select id="format" aria-label="图片格式">
+        <option value="all">全部格式</option>
+        <option value="JPG">JPG</option>
+        <option value="PNG">PNG</option>
+        <option value="WEBP">WEBP</option>
+        <option value="GIF">GIF</option>
+        <option value="SVG">SVG</option>
+        <option value="IMG">其他</option>
+      </select>
+      <select id="minWidth" aria-label="最小宽度">
+        <option value="0">全部尺寸</option>
+        <option value="300">≥ 300px</option>
+        <option value="800">≥ 800px</option>
+        <option value="1200">≥ 1200px</option>
+      </select>
+    </section>
+
+    <section class="capture-actions" aria-label="截图保存">
+      <button id="captureVisible" type="button"><span>▣</span><strong>全屏截图</strong><small>保存当前网页画面</small></button>
+      <button id="captureRegion" type="button"><span>⌗</span><strong>自由截图</strong><small>在网页拖拽选择</small></button>
+    </section>
+
+    <section class="toolbar">
+      <span><strong id="visibleCount">0</strong> 张 · 已选 <strong id="selectedCount">0</strong></span>
+      <button id="selectVisible" type="button">全选</button>
+      <button id="clearSelection" type="button">取消选择</button>
+      <button id="clearResults" type="button">清空列表</button>
+    </section>
+
+    <div id="status" class="status">正在连接当前标签页…</div>
+    <section id="gallery" class="empty">
+      <div class="empty-art">⌁</div>
+      <strong>图片会实时出现在这里</strong>
+      <span>浏览、点击或翻页后，面板将自动更新。</span>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong id="footerSelected">0</strong><span> 已选择</span></div>
+    <button id="downloadSelected" type="button" disabled>下载选中图片</button>
+  </footer>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="sidepanel.js"></script>
+</body>
+</html>

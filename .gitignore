@@ -1,0 +1,7 @@
+dist/
+dist-extension/
+site.tar.gz
+outputs/
+.openai/
+node_modules/
+.DS_Store
