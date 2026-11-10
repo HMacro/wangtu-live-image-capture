@@ -2,6 +2,8 @@
 
 一个适用于 Edge / Chrome 的 Manifest V3 扩展。用户在正常浏览器标签页中登录和操作网站，扩展的右侧 Side Panel 会实时发现当前页面中的图片资源。
 
+[隐私政策](PRIVACY.md) · [问题反馈](https://github.com/HMacro/wangtu-live-image-capture/issues)
+
 扩展图标沿用项目视觉标识：深色圆角方块与荧光绿色右下箭头。
 
 ## 功能

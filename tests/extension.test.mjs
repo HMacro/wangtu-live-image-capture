@@ -25,7 +25,9 @@ test("manifest 使用 Side Panel、下载权限和全站内容脚本", () => {
   assert.equal(manifest.side_panel.default_path, "sidepanel.html");
   assert.ok(manifest.permissions.includes("sidePanel"));
   assert.ok(manifest.permissions.includes("downloads"));
-  assert.ok(manifest.permissions.includes("activeTab"));
+  assert.ok(manifest.permissions.includes("tabs"));
+  assert.ok(!manifest.permissions.includes("activeTab"));
+  assert.ok(!manifest.permissions.includes("storage"));
   assert.equal(manifest.icons[128], "icons/icon128.png");
   assert.equal(manifest.action.default_icon[32], "icons/icon32.png");
   assert.deepEqual(manifest.content_scripts[0].matches, ["http://*/*", "https://*/*"]);
